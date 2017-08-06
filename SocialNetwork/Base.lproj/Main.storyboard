@@ -139,11 +139,43 @@
                     <connections>
                         <outlet property="txtEmailAddress" destination="RBO-nk-67z" id="Ccx-o6-4bK"/>
                         <outlet property="txtPassword" destination="vCD-mY-SwU" id="p5k-7y-8CE"/>
+                        <segue destination="IcG-tz-Fpv" kind="show" identifier="goToFeed" id="rpP-8C-7Hn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="HF0-y0-Z0t">
+            <objects>
+                <viewController id="IcG-tz-Fpv" customClass="FeedVC" customModule="SocialNetwork" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KyF-cB-kne"/>
+                        <viewControllerLayoutGuide type="bottom" id="1ph-Uh-8gT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HoV-Ir-sUC" customClass="Feed">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdJ-fC-UEW">
+                                <rect key="frame" x="129" y="318" width="116" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="22"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSignOutClicked:" destination="IcG-tz-Fpv" eventType="touchUpInside" id="AeY-Cy-FIX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47450980390000003" green="0.52549019610000003" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zDd-Wr-cRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911.20000000000005" y="144.3778110944528"/>
         </scene>
     </scenes>
     <resources>

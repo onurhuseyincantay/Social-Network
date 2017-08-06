@@ -10,13 +10,21 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 class SignInVC: UIViewController {
     @IBOutlet weak var txtEmailAddress: FTextField!
     @IBOutlet weak var txtPassword: FTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID){
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+            
+        }
     }
 
     @IBAction func KeyboardHiding(_ sender: FTextField) {
@@ -51,11 +59,14 @@ class SignInVC: UIViewController {
                         }else{
                             
                             print("Onur : Succesfully Authenticated with Firebase")
+                            if let user = user{
+                            self.completeSignIn(id: user.uid)
+                            }
                         }
                     })
                 }
         })
-        }
+    }
     }
 
     func firebaseAuth(_ credential : AuthCredential) {
@@ -64,16 +75,17 @@ class SignInVC: UIViewController {
                 print("Onur: Unable to Authenticate with Firebase :( -\(error.debugDescription)")
             }else{
                 print("Onur : Succesfully Authenticated with Firebase ")
+                if let user = user{
+                    self.completeSignIn(id: user.uid)
+                }
             }
         })
-    
-    
-    
-
-
-
 
     }
-
+    func completeSignIn(id : String){
+        let keychain = KeychainWrapper.standard.set(id , forKey: KEY_UID)
+        print("Onur : Data Saved to Keychain \(keychain)")
+         performSegue(withIdentifier: "goToFeed", sender: nil)
+    }
 }
 

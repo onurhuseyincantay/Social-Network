@@ -19,6 +19,7 @@
 		61DE7F881F34DF4700C9DFE7 /* roundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE7F871F34DF4700C9DFE7 /* roundedButton.swift */; };
 		61DE7F8A1F34E04F00C9DFE7 /* FTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE7F891F34E04F00C9DFE7 /* FTextField.swift */; };
 		61DE7F8C1F34E15200C9DFE7 /* FSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE7F8B1F34E15200C9DFE7 /* FSButton.swift */; };
+		61F64A7E1F374293008E4869 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F64A7D1F374293008E4869 /* FeedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		61DE7F891F34E04F00C9DFE7 /* FTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTextField.swift; sourceTree = "<group>"; };
 		61DE7F8B1F34E15200C9DFE7 /* FSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSButton.swift; sourceTree = "<group>"; };
 		61E42BED1F35DECB00D4184E /* SocialNetwork.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialNetwork.entitlements; sourceTree = "<group>"; };
+		61F64A7D1F374293008E4869 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		9310083D74F0DBC44AAD922C /* Pods-SocialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		9E075EE60BBB8C20B68E05E3 /* Pods-SocialNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				615187981F34BD1100445DDA /* SıgnInVC.swift */,
+				61F64A7D1F374293008E4869 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				615187B31F34DCCB00445DDA /* FView.swift in Sources */,
 				61DE7F881F34DF4700C9DFE7 /* roundedButton.swift in Sources */,
 				615187991F34BD1100445DDA /* SıgnInVC.swift in Sources */,
+				61F64A7E1F374293008E4869 /* FeedVC.swift in Sources */,
 				615187971F34BD1100445DDA /* AppDelegate.swift in Sources */,
 				61DE7F8A1F34E04F00C9DFE7 /* FTextField.swift in Sources */,
 				61DE7F8C1F34E15200C9DFE7 /* FSButton.swift in Sources */,
