@@ -14,6 +14,11 @@
 		6151879E1F34BD1100445DDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6151879D1F34BD1100445DDA /* Assets.xcassets */; };
 		615187A11F34BD1100445DDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6151879F1F34BD1100445DDA /* LaunchScreen.storyboard */; };
 		615187A91F34BD5B00445DDA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 615187A81F34BD5B00445DDA /* GoogleService-Info.plist */; };
+		615187B31F34DCCB00445DDA /* FView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615187B21F34DCCB00445DDA /* FView.swift */; };
+		61DE7F861F34DDF300C9DFE7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE7F851F34DDF300C9DFE7 /* Constants.swift */; };
+		61DE7F881F34DF4700C9DFE7 /* roundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE7F871F34DF4700C9DFE7 /* roundedButton.swift */; };
+		61DE7F8A1F34E04F00C9DFE7 /* FTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE7F891F34E04F00C9DFE7 /* FTextField.swift */; };
+		61DE7F8C1F34E15200C9DFE7 /* FSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE7F8B1F34E15200C9DFE7 /* FSButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,12 @@
 		615187A01F34BD1100445DDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		615187A21F34BD1100445DDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		615187A81F34BD5B00445DDA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		615187B21F34DCCB00445DDA /* FView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FView.swift; sourceTree = "<group>"; };
+		61DE7F851F34DDF300C9DFE7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		61DE7F871F34DF4700C9DFE7 /* roundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundedButton.swift; sourceTree = "<group>"; };
+		61DE7F891F34E04F00C9DFE7 /* FTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTextField.swift; sourceTree = "<group>"; };
+		61DE7F8B1F34E15200C9DFE7 /* FSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSButton.swift; sourceTree = "<group>"; };
+		61E42BED1F35DECB00D4184E /* SocialNetwork.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialNetwork.entitlements; sourceTree = "<group>"; };
 		9310083D74F0DBC44AAD922C /* Pods-SocialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		9E075EE60BBB8C20B68E05E3 /* Pods-SocialNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +83,7 @@
 		615187951F34BD1100445DDA /* SocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				61E42BED1F35DECB00D4184E /* SocialNetwork.entitlements */,
 				615187AD1F34C68600445DDA /* Resources */,
 				615187AC1F34C67E00445DDA /* Model */,
 				615187AB1F34C67400445DDA /* View */,
@@ -82,6 +94,7 @@
 				6151879F1F34BD1100445DDA /* LaunchScreen.storyboard */,
 				615187A81F34BD5B00445DDA /* GoogleService-Info.plist */,
 				615187A21F34BD1100445DDA /* Info.plist */,
+				61DE7F851F34DDF300C9DFE7 /* Constants.swift */,
 			);
 			path = SocialNetwork;
 			sourceTree = "<group>";
@@ -97,6 +110,10 @@
 		615187AB1F34C67400445DDA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				615187B21F34DCCB00445DDA /* FView.swift */,
+				61DE7F871F34DF4700C9DFE7 /* roundedButton.swift */,
+				61DE7F891F34E04F00C9DFE7 /* FTextField.swift */,
+				61DE7F8B1F34E15200C9DFE7 /* FSButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -160,6 +177,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = B4F2B776R3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -248,8 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				615187B31F34DCCB00445DDA /* FView.swift in Sources */,
+				61DE7F881F34DF4700C9DFE7 /* roundedButton.swift in Sources */,
 				615187991F34BD1100445DDA /* SıgnInVC.swift in Sources */,
 				615187971F34BD1100445DDA /* AppDelegate.swift in Sources */,
+				61DE7F8A1F34E04F00C9DFE7 /* FTextField.swift in Sources */,
+				61DE7F8C1F34E15200C9DFE7 /* FSButton.swift in Sources */,
+				61DE7F861F34DDF300C9DFE7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
