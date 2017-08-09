@@ -163,6 +163,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="smm-R2-Q9U">
                                         <rect key="frame" x="8" y="22" width="45" height="35"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="H4s-FL-gu6"/>
                                             <constraint firstAttribute="height" constant="35" id="ybO-iX-usr"/>
@@ -175,11 +176,23 @@
                                             <constraint firstAttribute="height" constant="45" id="Egs-0O-dSI"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jd2-WW-8Nw">
+                                        <rect key="frame" x="8" y="22" width="45" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="GP2-7W-d0J"/>
+                                            <constraint firstAttribute="height" constant="35" id="dlQ-sr-ekt"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="btnSignOutClicked:" destination="IcG-tz-Fpv" eventType="touchUpInside" id="MnI-Y3-lgp"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.47450980390000003" green="0.52549019610000003" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="TPB-58-HZI"/>
+                                    <constraint firstAttribute="bottom" secondItem="jd2-WW-8Nw" secondAttribute="bottom" constant="8" id="cIW-9q-3NY"/>
                                     <constraint firstItem="smm-R2-Q9U" firstAttribute="top" secondItem="viJ-q9-Q4l" secondAttribute="top" constant="22" id="f8e-BD-KaZ"/>
+                                    <constraint firstItem="jd2-WW-8Nw" firstAttribute="leading" secondItem="viJ-q9-Q4l" secondAttribute="leading" constant="8" id="hlR-b7-RyL"/>
                                     <constraint firstItem="HCP-hF-062" firstAttribute="centerY" secondItem="viJ-q9-Q4l" secondAttribute="centerY" id="iY2-Ky-aTd"/>
                                     <constraint firstItem="HCP-hF-062" firstAttribute="centerX" secondItem="viJ-q9-Q4l" secondAttribute="centerX" id="pMm-tE-BkJ"/>
                                     <constraint firstItem="smm-R2-Q9U" firstAttribute="leading" secondItem="viJ-q9-Q4l" secondAttribute="leading" constant="8" id="tRv-yh-QzT"/>
