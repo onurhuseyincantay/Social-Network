@@ -11,6 +11,7 @@
 		612FFA571F388F900019FFDE /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612FFA561F388F900019FFDE /* CircleView.swift */; };
 		612FFA591F38986F0019FFDE /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612FFA581F38986F0019FFDE /* PostCell.swift */; };
 		614D88111F3AEC4A00631375 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614D88101F3AEC4A00631375 /* DataService.swift */; };
+		6150A60F1F719232005E805C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6150A60E1F719232005E805C /* Post.swift */; };
 		615187971F34BD1100445DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615187961F34BD1100445DDA /* AppDelegate.swift */; };
 		615187991F34BD1100445DDA /* SıgnInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615187981F34BD1100445DDA /* SıgnInVC.swift */; };
 		6151879C1F34BD1100445DDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6151879A1F34BD1100445DDA /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		612FFA561F388F900019FFDE /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		612FFA581F38986F0019FFDE /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		614D88101F3AEC4A00631375 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		6150A60E1F719232005E805C /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		615187931F34BD1100445DDA /* SocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		615187961F34BD1100445DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		615187981F34BD1100445DDA /* SıgnInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SıgnInVC.swift"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		615187AC1F34C67E00445DDA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6150A60E1F719232005E805C /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				612FFA571F388F900019FFDE /* CircleView.swift in Sources */,
 				615187B31F34DCCB00445DDA /* FView.swift in Sources */,
 				61DE7F881F34DF4700C9DFE7 /* roundedButton.swift in Sources */,
+				6150A60F1F719232005E805C /* Post.swift in Sources */,
 				615187991F34BD1100445DDA /* SıgnInVC.swift in Sources */,
 				61F64A7E1F374293008E4869 /* FeedVC.swift in Sources */,
 				614D88111F3AEC4A00631375 /* DataService.swift in Sources */,
