@@ -13,6 +13,7 @@ class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource, UIImag
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addImage: CircleView!
     var posts = [Post]()
+    static var imageCache : NSCache <NSString, UIImage> = NSCache()
     var imagePicker : UIImagePickerController!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,8 +54,16 @@ class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource, UIImag
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
-            cell.configureCell(post: posts[indexPath.row])
-            return cell
+             let post = posts[indexPath.row]
+            if let img = FeedVC.imageCache.object(forKey: post.imgURL as NSString){
+             cell.configureCell(post: post, image:  img)
+                return cell
+            }
+            else{
+                cell.configureCell(post: post)
+                return cell
+            }
+           
         }
         return PostCell()
     }
