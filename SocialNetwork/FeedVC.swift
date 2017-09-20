@@ -37,9 +37,11 @@ class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
         return posts.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let post = posts[indexPath.row]
-        print("Onur : \(post.caption)")
-        return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
+            cell.configureCell(post: posts[indexPath.row])
+            return cell
+        }
+        return PostCell()
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
