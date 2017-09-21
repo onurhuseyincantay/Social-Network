@@ -9,8 +9,10 @@
 import UIKit
 import SwiftKeychainWrapper
 import Firebase
+var imageSelected = false
 class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource, UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var captionField: FTextField!
     @IBOutlet weak var addImage: CircleView!
     var posts = [Post]()
     static var imageCache : NSCache <NSString, UIImage> = NSCache()
@@ -40,6 +42,7 @@ class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource, UIImag
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage{
             addImage.image = image
+            imageSelected = true
         }else{
             print("Onur : a valid image wasn't chosen")
         }
@@ -71,6 +74,33 @@ class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource, UIImag
         return 1
     }
     
+    @IBAction func postButtonTapped(_ sender: Any) {
+        guard let caption = captionField.text , caption != "" else {
+            print("Onur : Must be an caption")
+            return
+        }
+        guard let img = addImage.image , imageSelected == true else {
+            print("Onur : Must be an İmage")
+            return
+        }
+        if let imageData = UIImageJPEGRepresentation(img, 0.2){
+            
+            let imgUid = NSUUID().uuidString
+            let metaData = StorageMetadata()
+            metaData.contentType = "image/jpeg"
+            DataService.ds.REF_POST_IMAGES.child(imgUid).putData(imageData, metadata: metaData) {(metadata,error) in
+                if error != nil {
+                    print("Onur : Unable to upload İmage")
+                }else {
+                    print("Onur : SuccesFully Downloaded İmage to the FireBase")
+                    let downloadURl = metadata?.downloadURL()?.absoluteString
+                }
+                
+                
+            }
+        }
+        
+    }
     
     @IBAction func btnSignOutClicked(_ sender: UIButton)
     {
