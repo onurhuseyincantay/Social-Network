@@ -299,10 +299,10 @@
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </stackView>
-                                                                <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="mdU-1S-7Lw">
+                                                                <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdU-1S-7Lw">
                                                                     <rect key="frame" x="0.0" y="70" width="327" height="137"/>
                                                                 </imageView>
-                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qGR-jJ-gDb">
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qGR-jJ-gDb">
                                                                     <rect key="frame" x="0.0" y="217" width="327" height="50"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
@@ -353,6 +353,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="qGR-jJ-gDb" id="1m5-HQ-N8E"/>
+                                            <outlet property="imgLike" destination="Aas-Ug-320" id="V6Q-iH-Toa"/>
                                             <outlet property="lblLikes" destination="3JB-Kq-goP" id="XLX-0R-5z4"/>
                                             <outlet property="lblUserName" destination="jNr-8y-Jm4" id="zqk-cM-gii"/>
                                             <outlet property="postImg" destination="mdU-1S-7Lw" id="2ZK-zZ-wa5"/>
@@ -398,7 +399,6 @@
         <image name="add-post" width="88" height="88"/>
         <image name="empty-heart" width="70" height="70"/>
         <image name="f" width="352" height="328"/>
-        <image name="placeholder" width="567" height="312"/>
         <image name="sign-out" width="92" height="65"/>
     </resources>
 </document>

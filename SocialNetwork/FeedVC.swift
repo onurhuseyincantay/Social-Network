@@ -36,6 +36,7 @@ class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource, UIImag
                 }
             }
             self.tableView.reloadData()
+           
         
         })
     }
@@ -60,13 +61,11 @@ class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource, UIImag
              let post = posts[indexPath.row]
             if let img = FeedVC.imageCache.object(forKey: post.imgURL as NSString){
              cell.configureCell(post: post, image:  img)
-                return cell
             }
             else{
                 cell.configureCell(post: post)
-                return cell
             }
-           
+           return cell
         }
         return PostCell()
     }
@@ -94,6 +93,10 @@ class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource, UIImag
                 }else {
                     print("Onur : SuccesFully Downloaded İmage to the FireBase")
                     let downloadURl = metadata?.downloadURL()?.absoluteString
+                    if let url = downloadURl {
+                        self.postToFirebase(imgURl: url)
+                    }
+                    
                 }
                 
                 
@@ -101,7 +104,19 @@ class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource, UIImag
         }
         
     }
-    
+    func postToFirebase(imgURl : String)  {
+        let post : Dictionary < String,AnyObject> = [
+            "caption" : captionField.text! as AnyObject ,
+            "imageUrl" : imgURl as AnyObject,
+            "likes" : 0 as AnyObject
+    ]
+        addImage.image = UIImage(named : "add-image")
+        imageSelected = false
+        captionField.text = ""
+        tableView.reloadData()
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+    }
     @IBAction func btnSignOutClicked(_ sender: UIButton)
     {
         let keyChainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
